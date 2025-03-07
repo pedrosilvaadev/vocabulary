@@ -17,7 +17,10 @@ function App() {
 
   return (
     <>
-      <Header handleCopyList={handleCopyList} />
+      <Header
+        handleCopyList={handleCopyList}
+        emptyList={listWord.length === 0}
+      />
       <InputWord
         handleAddNewWord={handleAddNewWord}
         word={word}
