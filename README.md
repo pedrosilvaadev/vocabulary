@@ -1,54 +1,59 @@
-# React + TypeScript + Vite
+# Vocabulary Management Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project aims to provide a simple and efficient platform for managing words and vocabulary. It allows users to add, remove, and copy words to the clipboard.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![image](https://github.com/user-attachments/assets/832f96e9-5de9-451c-a00a-d37253bbfdd6)
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Features
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- **Add words**: Add new words to the vocabulary list.
+- **Remove words**: Remove specific words from the vocabulary list.
+- **Copy list to clipboard**: Copy the entire vocabulary list to the clipboard.
+- **Error handling**: Displays an error message if the word already exists in the list.
+- **Visual feedback**: Success and error messages are shown to the user via toast notifications.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Technologies Used
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **React.js**: A JavaScript library for building user interfaces.
+- **React Hook**: Used for managing state and functionality in the vocabulary list.
+- **Vitest**: A testing framework to ensure the functionality of the code.
+- **Toastify**: To show feedback messages to the user.
+- **Jest / Testing Library**: To ensure all functionalities are properly tested.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/your-username/your-project.git
+   cd your-project
+
+2. Install the dependencies:
+
+   ```bash
+    npm install
+
+3. Start the development server:
+
+   ```bash
+    npm start
+
+## Tests
+To run the tests for the project, execute:
+
+  ```bash
+    npm test
+````
+
+## Usage Example
+1. Add a new word:
+Enter the word in the input field and click the button to add it.
+2. Remove a word:
+Click on a word in the list to remove it.
+3. Copy list to clipboard:
+Click the button to copy the entire vocabulary list to the clipboard.
+Contributions
+Contributions are welcome! If you encounter any bugs or have suggestions for improvements, feel free to open an issue or submit a pull request.
+
